@@ -6,10 +6,10 @@ dotenv.config({ path: path.resolve(__dirname, '.env.dev') });
 
 export default defineConfig({
     testDir: './tests',
-    fullyParallel: true,
+    fullyParallel: false,
     forbidOnly: !!process.env.CI,
     retries: process.env.CI ? 2 : 0,
-    workers: process.env.CI ? 4 : 4, // Increased local workers
+    workers: process.env.CI ? 2 : 2, // Increased local workers
     reporter: [
         ['html', { outputFolder: 'reports/html' }],
         ['junit', { outputFile: 'reports/junit/results.xml' }],
