@@ -1,0 +1,24 @@
+{
+  "name": "womaty-business-automation",
+  "version": "1.0.0",
+  "description": "Production-ready Playwright E2E framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test",
+    "test:smoke": "npx playwright test --grep @smoke",
+    "test:chromium": "npx playwright test --project=chromium:auth",
+    "test:firefox": "npx playwright test --project=firefox:auth",
+    "test:mobile": "npx playwright test --project=mobile:auth",
+    "test:auth": "npx playwright test --project=auth-tests",
+    "report": "npx playwright show-report",
+    "lint": "eslint . --ext .ts",
+    "format": "prettier --write ."
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^8.4.1",
+    "@playwright/test": "^1.42.1",
+    "@types/node": "^20.11.24",
+    "dotenv": "^16.6.1",
+    "typescript": "^5.3.3"
+  }
+}
