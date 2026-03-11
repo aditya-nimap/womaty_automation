@@ -26,7 +26,7 @@ export default defineConfig({
         video: 'on', // Record video for all tests
         actionTimeout: 15_000,
         navigationTimeout: 30_000,
-        headless: false, // Run in headful mode
+        headless: true, // Run in headful mode
     },
 
     projects: [
